@@ -1,0 +1,16 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Cliente</th>
+        <th scope="col">Total</th>
+        <th scope="col">Productos Distintos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pedido of listadoPedidos">
+        <th scope="row">{{ pedido.nombreCliente}}</th>
+        <td>{{ pedido.total | currency}}</td>
+        <td>{{ pedido.pedidoDetalle.length}}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,27 @@
+<p>prueba</p>
+
+<div class="container">
+ 
+    <h3>Agregar Clientes</h3>
+
+    <div class="btn-group">
+        <button class="btn btn-success" (click)="guardarClientes()">+ Clientes</button>
+        <button class="btn btn-success" (click)="guardarProductos()">+ Productos</button>
+
+        <button class="btn btn-danger" (click)="eliminarClientes()">x Clientes</button>
+        <button class="btn btn-danger" (click)="eliminarProductos()">x Productos</button>
+        <button class="btn btn-danger" (click)="eliminarTodos()">Eliminar Todo</button>
+    </div>
+
+    <div class="card" *ngFor="let cliente of clientesLocal" style="margin-top:10px">
+        <p> <strong> Nombre: {{ cliente.nombre }} </strong></p>
+        <p>Apellido: {{ cliente.apellido }}</p>
+        <p>Edad: {{ cliente.edad }}</p>
+    </div>
+
+    <div class="card"  *ngFor="let producto of productosLocal" style="margin-top:10px">
+        <p> <strong> Producto: {{ producto.nombre }} </strong></p>
+        <p>Precio: {{ producto.precio }}</p>
+    </div>
+
+</div>
